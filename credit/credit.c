@@ -19,10 +19,7 @@ int main(void)
 
     if (cardNumber)
 
-    if (cardNumber < 0) {
-        printf("INVALID");
-    }
-    else if (numLength < 13 || numLength == 14 || numLength > 16)
+    if (cardNumber < 0)
     {
         printf("INVALID");
     }
