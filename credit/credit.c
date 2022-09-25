@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
+
 int main(void)
 {
     int cardNumber = get_long("Number: ");
@@ -9,5 +10,5 @@ int main(void)
     {
         printf("INVALID");
     }
-    printf()
+    printf(cardNumber[1]);
 }
