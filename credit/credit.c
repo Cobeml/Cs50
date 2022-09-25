@@ -8,8 +8,8 @@ int main(void)
 
     int numLength = floor(log10(cardNumber) + 1);
 
-    int luhnLastDigit = 0;
-    
+    int luhnNum = floor(cardNumber / 10);
+
     bool luhn = y;
     if (cardNumber)
 
