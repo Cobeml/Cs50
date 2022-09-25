@@ -13,5 +13,4 @@ int main(void)
     {
         printf("INVALID");
     }
-    printf(cardNumber[1]);
 }
