@@ -9,12 +9,12 @@ int main(void)
     int numLength = floor(log10(cardNumber) + 1);
 
     int digitArray[numLength];
-    for (i = 0; i < numLength; i++)
+    for (int i = 0; i < numLength; i++)
     {
         digitArray[i] = floor(cardNumber / pow(10, numLength - i));
         cardNumber -= digitArray[i] * pow(10, numLength);
     }
-
+printf(digitArray);
     int luhnNum = 0;
 
     bool luhn = y;
