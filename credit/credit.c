@@ -5,7 +5,14 @@
 int main(void)
 {
     int cardNumber = get_long("Number: ");
+
     int numLength = floor(log10(cardNumber) + 1);
+
+    int luhnLastDigit = 0;
+    
+    bool luhn = y;
+    if (cardNumber)
+
     if (cardNumber < 0) {
         printf("INVALID");
     }
