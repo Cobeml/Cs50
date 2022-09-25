@@ -4,5 +4,6 @@
 int main(void)
 {
     int cardNumber = get_long("Number: ");
-    if (cardNumber )
+    int numLength = floor(log10(abs(cardNumber)) + 1);
+    if (numLength < 13 || numLength == 14 || numLength > )
 }
