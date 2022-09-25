@@ -7,8 +7,9 @@ int main(void)
     if (height <= 8 && height >= 1)
     {
 
-    } else
+    }
+    else
     {
-        
+
     }
 }
