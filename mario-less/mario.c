@@ -3,16 +3,13 @@
 
 int main(void)
 {
-    int height = get_int("Height: ");
-    for (int i = 0; i < height; i++)
+    do
     {
-        
+        int height = get_int("Height: ");
     }
-    if (height <= 8 && height >= 1)
-    {
+    while(height < 1 || height > 8);
 
-    }
-    else
+    for (int i = 0; i < height; i++)
     {
 
     }
