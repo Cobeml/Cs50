@@ -11,7 +11,8 @@ int main(void)
     int digitArray[numLength];
     for (i = 0; i < numLength; i++)
     {
-        digitArray[i] = floor(cardNumber / pow(10, numLength - i))
+        digitArray[i] = floor(cardNumber / pow(10, numLength - i));
+        cardNumber -= digitArray[i] * pow(10, numLength);
     }
 
     int luhnNum = 0;
