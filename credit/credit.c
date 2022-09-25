@@ -8,7 +8,13 @@ int main(void)
 
     int numLength = floor(log10(cardNumber) + 1);
 
-    int luhnNum = floor(cardNumber / pow(10));
+    int digitArray[numLength];
+    for (i = 0; i < numLength; i++)
+    {
+        digitArray[i] = floor(cardNumber / pow(10, numLength))
+    }
+
+    int luhnNum = 0;
 
     bool luhn = y;
     if (cardNumber)
