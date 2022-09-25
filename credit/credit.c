@@ -4,5 +4,5 @@
 int main(void)
 {
     int cardNumber = get_long("Number: ");
-    
+    if (cardNumber)
 }
