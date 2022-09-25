@@ -17,7 +17,6 @@ int main(void)
 
     int luhnNum = 0;
 
-    bool luhn = y;
     if (cardNumber)
 
     if (cardNumber < 0) {
@@ -27,5 +26,4 @@ int main(void)
     {
         printf("INVALID");
     }
-    else if ()
 }
