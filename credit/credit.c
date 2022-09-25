@@ -14,7 +14,7 @@ int main(void)
         digitArray[i] = floor(cardNumber / pow(10, numLength - i));
         cardNumber -= digitArray[i] * pow(10, numLength);
     }
-
+printf(")
     int luhnNum = 0;
 
     if (cardNumber)
