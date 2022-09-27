@@ -14,7 +14,7 @@ int main(void)
     {
         digitArray[i] = floor(cardNumber / pow(10, numLength - i - 1));
         printf("%i\n", digitArray[i]);
-        cardNumber -= digitArray[i] * pow(10, numLength - i);
+        cardNumber -= digitArray[i] * pow(10, numLength - i - 1);
     }
 printf("%i\n", cardNumber);
 //use card number digits to calculate the luhn number
