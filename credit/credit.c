@@ -27,9 +27,10 @@ int main(void)
     int doubledNums[floor(numLength / 2)];
     for (int i = 0; i < floor(numLength / 2));
     {
-        doubledNums[i] = digitArray[-2 * i] * 2;
+        doubledNums[i] = digitArray[-2 * (i + 1)] * 2;
     }
 
+    f
     if (cardNumber < 0)
     {
         printf("INVALID\n");
