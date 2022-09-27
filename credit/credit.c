@@ -13,6 +13,7 @@ int main(void)
     for (int i = 0; i < numLength; i++)
     {
         digitArray[i] = floor(cardNumber / pow(10, numLength - i - 1));
+        printf()
         cardNumber -= digitArray[i] * pow(10, numLength);
     }
 printf("%i%i%i\n", digitArray[0], digitArray[1], digitArray[2]);
