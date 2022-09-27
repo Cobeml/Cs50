@@ -24,7 +24,11 @@ int main(void)
 
 //use card number digits to calculate the luhn number
     int luhnNum = 0;
-    for (int i = 0; i)
+    int doubledNums[floor(numLength / 2)];
+    for (int i = 0; i < floor(numLength / 2));
+    {
+        doubledNums[i] = 
+    }
 
     if (cardNumber < 0)
     {
