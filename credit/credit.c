@@ -12,7 +12,7 @@ int main(void)
     int digitArray[numLength];
     for (int i = 0; i < numLength; i++)
     {
-        digitArray[i] = floor(cardNumber / pow(10, numLength - i));
+        digitArray[i] = floor(cardNumber / pow(10, numLength - i - 1));
         cardNumber -= digitArray[i] * pow(10, numLength);
     }
 printf("%i%i%i\n", digitArray[0], digitArray[1], digitArray[2]);
@@ -25,7 +25,7 @@ printf("%i%i%i\n", digitArray[0], digitArray[1], digitArray[2]);
 
     if (cardNumber < 0)
     {
-        printf("INVALID");
+        printf("INVALID\n");
     }
 }
 //if last digit of luhn number is not 0 then print INVALID
