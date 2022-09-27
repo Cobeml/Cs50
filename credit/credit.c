@@ -13,18 +13,18 @@ int main(void)
     for (int i = 0; i < numLength; i++)
     {
         digitArray[i] = floor(cardNumber / pow(10, numLength - i - 1));
-        printf("%i\n", digitArray[i]);
         cardNumber -= digitArray[i] * pow(10, numLength - i - 1);
     }
 
 // restore value of cardNumber
     for (int i = 0; i < numLength; i++)
     {
-        cardNumber += digitArray[i] 
+        cardNumber += digitArray[i] * pow(10, numLength - i - 1);
     }
-printf("%i\n", cardNumber);
+
 //use card number digits to calculate the luhn number
     int luhnNum = 0;
+    
 
     if (cardNumber < 0)
     {
