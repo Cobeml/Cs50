@@ -8,7 +8,7 @@ int main(void)
 
     int numLength = floor(log10(cardNumber) + 1);
 
-// creating an array with the digits from cardNumber WHAT DID I DO WRONG??
+// creating an array with the digits from cardNumber 
     int digitArray[numLength];
     for (int i = 0; i < numLength; i++)
     {
@@ -29,8 +29,7 @@ int main(void)
     {
         doubledNums[i] = digitArray[-2 * (i + 1)] * 2;
     }
-
-    f
+// get individual digits of doubled nums ???
     if (cardNumber < 0)
     {
         printf("INVALID\n");
