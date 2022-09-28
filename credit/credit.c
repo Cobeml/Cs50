@@ -10,8 +10,9 @@ int main(void)
 
 //use card number digits to calculate the luhn number
     int luhnNum = 0;
-    for (int i = 0; i < floor(numLength / 2));
     int everyOtherDigit = 0;
+    int 
+    for (int i = 0; i < floor(numLength / 2))
     {
         everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / (10 * pow(10, i)));
         int doubledDigit = everyOtherDigit * 2
