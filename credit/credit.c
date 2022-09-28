@@ -26,7 +26,10 @@ int main(void)
             luhnNum += doubledDigit;
         }
     }
-    for (int i = 0; i < floor(numLength / 2))
+    for (int i = 0; i < ceil(numLength / 2))
+    {
+        
+    }
 // get individual digits of doubled nums ???
     if (cardNumber < 0)
     {
