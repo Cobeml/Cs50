@@ -33,6 +33,9 @@ int main(void)
         luhnNum += notAddedDigit;
     }
 
+    // create int that holds first and another that holds the first two digits
+    int firstDigit = (floor(cardNumber / (pow(10, numLength) - 1)));
+    int firstTwoDigits = (floor(cardNumber / (pow(10, numLength) - 2)));
 
     if (cardNumber < 0)
     {
@@ -42,15 +45,22 @@ int main(void)
     {
         printf("INVALID\n");
     }
-    else if ((numLength == 13 || numLength == 16) && floor(cardNumber / (pow(10, numLength) - 1)) == 4)
+    else if ((numLength == 13 || numLength == 16) && firstDigit == 4)
     {
         printf("VISA\n");
     }
-    else if (numLength == 15 && (floor(cardNumber / (pow(10, numLength) - 2))) == 34 || (floor(cardNumber / (pow(10, numLength) - 2))) == 37)
+    else if (numLength == 15 && (firstTwoDigits == 34 || firstTwoDigits == 37))
     {
         printf("AMEX\n");
     }
-    else if (numLength == 16 && )
+    else if (numLength == 16 && (firstTwoDigits == 51 || firstTwoDigits == 52 || firstTwoDigits == 53 || firstTwoDigits == 54 || firstTwoDigits == 55))
+    {
+        printf("MASTERCARD\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
 }
 //if last digit of luhn number is not 0 then print INVALID
 //if cardnumber begins with 4 and is 13 or 16 digits long then print VISA
