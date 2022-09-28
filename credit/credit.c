@@ -14,9 +14,15 @@ int main(void)
     int everyOtherDigit = 0;
     {
         everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / (10 * pow(10, i)));
+        int doubledDigit = everyOtherDigit * 2
         if (everyOtherDigit * 2 >= 10)
         {
-            luhnNum += everyOtherDigit % 10
+            luhnNum += doubledDigit % 10;
+            luhnNum += 1;
+        }
+        else
+        {
+            luhnNum += doubledDigit;
         }
     }
 // get individual digits of doubled nums ???
@@ -24,6 +30,7 @@ int main(void)
     {
         printf("INVALID\n");
     }
+    else if
 }
 //if last digit of luhn number is not 0 then print INVALID
 //if cardnumber begins with 4 and is 13 or 16 digits long then print VISA
