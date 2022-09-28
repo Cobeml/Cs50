@@ -14,7 +14,7 @@ int main(void)
     int doubledDigits = 0;
     for (int i = 0; i < floor(numLength / 2))
     {
-        everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / (10 * pow(10, i)));
+        everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / (10 * pow(100, i)));
         doubledDigit = everyOtherDigit * 2
         if (everyOtherDigit * 2 >= 10)
         {
@@ -29,7 +29,7 @@ int main(void)
     int notAddedDigits = 0;
     for (int i = 0; i < ceil(numLength / 2))
     {
-        notAddedDigits = floor((cardNumber % pow(100, i)) / )
+        notAddedDigits = floor((cardNumber % (10 * pow(100, i))) / pow(100, i));
     }
 // get individual digits of doubled nums ???
     if (cardNumber < 0)
