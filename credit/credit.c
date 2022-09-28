@@ -14,10 +14,10 @@ int main(void)
     for (int i = 0; i < floor(numLength / 2));
     int everyOtherDigit = 0;
     {
-        everyOtherDigit = cardNumber % (10 * pow(100, i));
+        everyOtherDigit = floor(cardNumber % (10 * pow(100, i)));
         if (everyOtherDigit * 2 >= 10)
         {
-            luhnNum += everyOtherDigit
+            luhnNum += everyOtherDigit % 10
         }
     }
 // get individual digits of doubled nums ???
