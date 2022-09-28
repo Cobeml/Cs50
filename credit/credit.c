@@ -26,17 +26,18 @@ int main(void)
             luhnNum += doubledDigit;
         }
     }
-    int notAddedDigits = 0;
+    int notAddedDigit = 0;
     for (int i = 0; i < ceil(numLength / 2))
     {
-        notAddedDigits = floor((cardNumber % (10 * pow(100, i))) / pow(100, i));
+        notAddedDigit = floor((cardNumber % (10 * pow(100, i))) / pow(100, i));
+        luhnNum += notAddedDigit;
     }
-// get individual digits of doubled nums ???
+
     if (cardNumber < 0)
     {
         printf("INVALID\n");
     }
-    else if
+    else if (luhnNum % 10 )
 }
 //if last digit of luhn number is not 0 then print INVALID
 //if cardnumber begins with 4 and is 13 or 16 digits long then print VISA
