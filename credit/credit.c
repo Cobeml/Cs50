@@ -12,7 +12,7 @@ int main(void)
     int luhnNum = 0;
     int everyOtherDigit = 0;
     int doubledDigits = 0;
-    for (int i = 0; i < floor(numLength / 2))
+    for (int i = 0; i < floor(numLength / 2); i++)
     {
         everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / (10 * pow(100, i)));
         doubledDigit = everyOtherDigit * 2
