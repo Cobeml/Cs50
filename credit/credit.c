@@ -25,8 +25,10 @@ int main(void)
 //use card number digits to calculate the luhn number
     int luhnNum = 0;
     int doubledNums[floor(numLength / 2)];
-    for (int i = 0; i < numLength));
+    for (int i = 0; i < floor(numLength / 2));
+    int digit = 0;
     {
+        digit = 
         doubledNums[i] = digitArray[-2 * (i + 1)] * 2;
     }
 // get individual digits of doubled nums ???
