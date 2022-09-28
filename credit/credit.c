@@ -11,11 +11,11 @@ int main(void)
 //use card number digits to calculate the luhn number
     int luhnNum = 0;
     int everyOtherDigit = 0;
-    int 
+    int doubledDigits = 0;
     for (int i = 0; i < floor(numLength / 2))
     {
         everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / (10 * pow(10, i)));
-        int doubledDigit = everyOtherDigit * 2
+        doubledDigit = everyOtherDigit * 2
         if (everyOtherDigit * 2 >= 10)
         {
             luhnNum += doubledDigit % 10;
@@ -26,6 +26,7 @@ int main(void)
             luhnNum += doubledDigit;
         }
     }
+    for (int i = 0; i < floor(numLength / 2))
 // get individual digits of doubled nums ???
     if (cardNumber < 0)
     {
