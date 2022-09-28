@@ -41,7 +41,11 @@ int main(void)
     {
         printf("INVALID\n");
     }
-    else if ()
+    else if ((numLength == 13 || numLength == 16) && floor(cardNumber / (pow(10, numLength) - 1)) == 4)
+    {
+        printf("VISA\n");
+    }
+    else if (numLength == 15 && )
 }
 //if last digit of luhn number is not 0 then print INVALID
 //if cardnumber begins with 4 and is 13 or 16 digits long then print VISA
