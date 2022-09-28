@@ -13,7 +13,7 @@ int main(void)
     for (int i = 0; i < floor(numLength / 2));
     int everyOtherDigit = 0;
     {
-        everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / pow(10, i));
+        everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / (10 * pow(10, i)));
         if (everyOtherDigit * 2 >= 10)
         {
             luhnNum += everyOtherDigit % 10
