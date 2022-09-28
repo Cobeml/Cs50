@@ -14,6 +14,7 @@ int main(void)
     int doubledDigits = 0;
     for (int i = 0; i < floor(numLength / 2); i++)
     {
+// WHAT IS WRONG ON THE LINE BELOW!
         everyOtherDigit = floor((cardNumber % pow(100, i + 1)) / (10 * pow(100, i)));
         doubledDigit = everyOtherDigit * 2
         if (everyOtherDigit * 2 >= 10)
