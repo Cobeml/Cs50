@@ -26,9 +26,10 @@ int main(void)
             luhnNum += doubledDigit;
         }
     }
+    int notAddedDigits
     for (int i = 0; i < ceil(numLength / 2))
     {
-        
+
     }
 // get individual digits of doubled nums ???
     if (cardNumber < 0)
