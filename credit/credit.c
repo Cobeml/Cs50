@@ -15,7 +15,10 @@ int main(void)
     int everyOtherDigit = 0;
     {
         everyOtherDigit = cardNumber % (10 * pow(100, i));
-        doubledNums[i] = everyOtherDigit
+        if (everyOtherDigit * 2 >= 10)
+        {
+            luhnNum += everyOtherDigit
+        }
     }
 // get individual digits of doubled nums ???
     if (cardNumber < 0)
