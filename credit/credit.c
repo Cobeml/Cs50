@@ -14,8 +14,8 @@ int main(void)
     for (int i = 0; i < floor(numLength / 2));
     int everyOtherDigit = 0;
     {
-        digit = cardNumber % (10 * pow(100, i));
-        doubledNums[i] = digitArray[-2 * (i + 1)] * 2;
+        everyOtherDigit = cardNumber % (10 * pow(100, i));
+        doubledNums[i] = everyOtherDigit
     }
 // get individual digits of doubled nums ???
     if (cardNumber < 0)
