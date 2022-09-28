@@ -8,7 +8,7 @@ int main(void)
 
     int numLength = floor(log10(cardNumber) + 1);
 
-// creating an array with the digits from cardNumber 
+// creating an array with the digits from cardNumber
     int digitArray[numLength];
     for (int i = 0; i < numLength; i++)
     {
@@ -25,7 +25,7 @@ int main(void)
 //use card number digits to calculate the luhn number
     int luhnNum = 0;
     int doubledNums[floor(numLength / 2)];
-    for (int i = 0; i < floor(numLength / 2));
+    for (int i = 0; i < numLength));
     {
         doubledNums[i] = digitArray[-2 * (i + 1)] * 2;
     }
