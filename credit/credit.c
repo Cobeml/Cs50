@@ -8,20 +8,6 @@ int main(void)
 
     int numLength = floor(log10(cardNumber) + 1);
 
-// creating an array with the digits from cardNumber
-    int digitArray[numLength];
-    for (int i = 0; i < numLength; i++)
-    {
-        digitArray[i] = floor(cardNumber / pow(10, numLength - i - 1));
-        cardNumber -= digitArray[i] * pow(10, numLength - i - 1);
-    }
-
-// restore value of cardNumber
-    for (int i = 0; i < numLength; i++)
-    {
-        cardNumber += digitArray[i] * pow(10, numLength - i - 1);
-    }
-
 //use card number digits to calculate the luhn number
     int luhnNum = 0;
     int doubledNums[floor(numLength / 2)];
