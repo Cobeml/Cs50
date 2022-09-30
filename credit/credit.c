@@ -15,7 +15,7 @@ int main(void)
     for (int i = 0; i < floor(numLength / 2); i++)
     {
 // WHAT IS WRONG ON THE LINE BELOW!?
-        everyOtherDigit = floor((cardNumber % pow(100.0, i + 1)) / (10 * pow(100, i)));
+        everyOtherDigit = floor(fmod(cardNumber, pow(100, i + 1)) / (10 * pow(100, i)));
         doubledDigit = everyOtherDigit * 2
         if (everyOtherDigit * 2 >= 10)
         {
@@ -30,7 +30,7 @@ int main(void)
     int notAddedDigit = 0;
     for (int i = 0; i < ceil(numLength / 2))
     {
-        notAddedDigit = floor((cardNumber % (10 * pow(100, i))) / pow(100, i));
+        notAddedDigit = floor(fmod(cardNumber, (10 * pow(100, i))) / pow(100, i));
         luhnNum += notAddedDigit;
     }
 
