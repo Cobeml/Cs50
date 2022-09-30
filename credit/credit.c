@@ -19,12 +19,12 @@ int main(void)
         doubledDigits = everyOtherDigit * 2;
         if (everyOtherDigit * 2 >= 10)
         {
-            luhnNum += doubledDigit % 10;
+            luhnNum += doubledDigits % 10;
             luhnNum += 1;
         }
         else
         {
-            luhnNum += doubledDigit;
+            luhnNum += doubledDigits;
         }
     }
     int notAddedDigit = 0;
