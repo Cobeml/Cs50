@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    int cardNumber = get_long("Number: ");
+    long cardNumber = get_long("Number: ");
 
     int numLength = floor(log10(cardNumber) + 1);
 
