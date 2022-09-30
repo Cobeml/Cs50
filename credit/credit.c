@@ -16,7 +16,7 @@ int main(void)
     {
 // WHAT IS WRONG ON THE LINE BELOW!?
         everyOtherDigit = floor(fmod(cardNumber, pow(100, i + 1)) / (10 * pow(100, i)));
-        doubledDigits = everyOtherDigit * 2
+        doubledDigits = everyOtherDigit * 2;
         if (everyOtherDigit * 2 >= 10)
         {
             luhnNum += doubledDigit % 10;
