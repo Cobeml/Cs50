@@ -28,7 +28,7 @@ int main(void)
         }
     }
     int notAddedDigit = 0;
-    for (int i = 0; i < ceil(numLength / 2); i++)
+    for (int i = 0; i < ceil(numLength / 2) + 1; i++)
     {
         notAddedDigit = floor(fmod(cardNumber, (10 * pow(100, i))) / pow(100, i));
         luhnNum += notAddedDigit;
