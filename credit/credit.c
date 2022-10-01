@@ -35,8 +35,8 @@ int main(void)
     }
 
     // create int that holds first and another that holds the first two digits
-    int firstDigit = (floor(cardNumber / (pow(10, numLength) - 1)));
-    int firstTwoDigits = (floor(cardNumber / (pow(10, numLength) - 2)));
+    int firstDigit = (floor(cardNumber / pow(10, numLength - 1)));
+    int firstTwoDigits = (floor(cardNumber / pow(10, numLength - 2)));
 
     if (cardNumber < 0)
     {
