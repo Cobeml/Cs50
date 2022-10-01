@@ -54,7 +54,8 @@ int main(void)
     {
         printf("AMEX\n");
     }
-    else if (numLength == 16 && (firstTwoDigits == 51 || firstTwoDigits == 52 || firstTwoDigits == 53 || firstTwoDigits == 54 || firstTwoDigits == 55))
+    else if (numLength == 16 && (firstTwoDigits == 51 || firstTwoDigits == 52 || firstTwoDigits == 53 || firstTwoDigits == 54
+     || firstTwoDigits == 55))
     {
         printf("MASTERCARD\n");
     }
