@@ -40,8 +40,9 @@ int compute_score(string word)
     for (int i = 0; i < strlen(word); i++)
     {
         int letterAsNumber = word[i];
-        if (a <= letterAsNumber && word[i] <= z)
+        if (97 <= letterAsNumber && letterAsNumber <= 122)
         {
-            score += POINTS[word[i]]
+            score += POINTS[letterAsNumber - 97];
         }
+        else if ()
 }
