@@ -44,5 +44,8 @@ int compute_score(string word)
         {
             score += POINTS[letterAsNumber - 97];
         }
-        else if ()
+        else if (65 <= letterAsNumber && letterAsNumber <= 90)
+        {
+            score += POINTS[letterAsNumber - 65];
+        }
 }
