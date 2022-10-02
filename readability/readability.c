@@ -35,7 +35,7 @@ for (i = 0; i < strlen(text); i++)
         numOfLetters ++;
     }
 
-    if (text[i] == ' ' && text[i - 1])
+    if (text[i] == ' ' && (text[i - 1] >= ! || text[i - 1] <= z)
 
     if (text[i] == '.' || text[i] == '?' || text[i] == '!')
     {
