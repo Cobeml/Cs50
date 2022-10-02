@@ -24,7 +24,14 @@ int main(void)
     }
 }
 
-int length = strlen()
+int numOfLetters = 0;
+for (i = 0; i < strlen(text); i++)
+{
+    if ((text[i] >= a && text[i] <= z) || (text[i] >= A && text[i] <= Z)
+    {
+        numOfLetters ++;
+    }
+}
 long lettersPer100(string words)
 {
 
