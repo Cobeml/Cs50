@@ -20,6 +20,13 @@ int main(void)
     }
     else
     {
-        printf("Grade %)
+        printf("Grade %i\n", index);
     }
 }
+
+long lettersPer100(string words)
+{
+
+}
+
+long sentencesPer100(string words)
