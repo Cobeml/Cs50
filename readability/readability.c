@@ -34,7 +34,13 @@ for (i = 0; i < strlen(text); i++)
     {
         numOfLetters ++;
     }
+
+    if ()
+
     if (text[i] == '.' || text[i] == '?' || text[i] == '!')
+    {
+        numOfSentences ++
+    }
 }
 
 long lettersPer100(string words)
