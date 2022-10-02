@@ -25,13 +25,18 @@ int main(void)
 }
 
 int numOfLetters = 0;
+int numOfWords = 0;
+int numOfSentences = 0;
+
 for (i = 0; i < strlen(text); i++)
 {
     if ((text[i] >= a && text[i] <= z) || (text[i] >= A && text[i] <= Z)
     {
         numOfLetters ++;
     }
+    if (text[i] == '.' || text[i] == '?' || text[i] == '!')
 }
+
 long lettersPer100(string words)
 {
 
