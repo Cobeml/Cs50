@@ -26,7 +26,7 @@ int main(void)
 
 long lettersPer100(string words)
 {
-
+    
 }
 
 long sentencesPer100(string words)
