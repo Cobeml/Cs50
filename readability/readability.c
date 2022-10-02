@@ -24,9 +24,10 @@ int main(void)
     }
 }
 
+int length = strlen()
 long lettersPer100(string words)
 {
-    
+
 }
 
 long sentencesPer100(string words)
