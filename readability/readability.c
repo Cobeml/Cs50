@@ -24,6 +24,7 @@ int main(void)
     }
 }
 
+
 int numOfLetters = 0;
 int numOfWords = 0;
 int numOfSentences = 0;
@@ -48,7 +49,7 @@ for (i = 0; i < strlen(text) + 1; i++)
 
 long lettersPer100(string words)
 {
-    
+
 }
 
 long sentencesPer100(string words)
