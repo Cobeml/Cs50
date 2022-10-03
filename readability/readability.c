@@ -37,6 +37,7 @@ int findLetterNum(string input)
             numOfLetters ++;
         }
     }
+    printf("%i\n", numOfLetters);
     return numOfLetters;
 }
 
@@ -50,6 +51,7 @@ int findWordNum(string input)
             numOfWords ++;
         }
     }
+    printf("%i\n", numOfWords);
     return numOfWords;
 }
 
@@ -63,6 +65,7 @@ int findSentenceNum(string input)
             numOfSentences ++;
         }
     }
+    printf("%i\n", numOfSentences);
     return numOfSentences;
 }
 
