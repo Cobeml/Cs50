@@ -4,16 +4,16 @@
 #include <string.h>
 
 // declare function
-long lettersPer100(string words);
-long sentencesPer100(string words);
+double lettersPer100(string words);
+double sentencesPer100(string words);
 
 int main(void)
 {
     // get user input
     string text = get_string("Text: ");
     // find index from text
-    long index = 0.0588 * lettersPer100(text) - 0.296 * sentencesPer100(text) - 15.8;
-    int 
+    double index = 0.0588 * lettersPer100(text) - 0.296 * sentencesPer100(text) - 15.8;
+    int roundedIndex = round(index);
     // print output based on index
     if (index >= 16) {
         printf ("Grade 16+\n");
@@ -23,7 +23,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %i\n", index);
+        printf("Grade %i\n", roundedIndex);
     }
 }
 
@@ -70,12 +70,12 @@ int findSentenceNum(string input)
     return numOfSentences;
 }
 
-long lettersPer100(string words)
+double lettersPer100(string words)
 {
     return findLetterNum(words) / findWordNum(words) * 100;
 }
 
-long sentencesPer100(string words)
+double sentencesPer100(string words)
 {
     return findSentenceNum(words) / findWordNum(words) * 100;
 }
