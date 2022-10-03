@@ -32,7 +32,7 @@ int findLetterNum(string input)
     int numOfLetters = 0;
     for (int i = 0; i < strlen(input); i++)
     {
-        if ((input[i] >= 'a' && input[i] <= 'z') || (input[i] >= 'A' && input[i] <= 'Z')
+        if ((input[i] >= 'a' && input[i] <= 'z') || (input[i] >= 'A' && input[i] <= 'Z'))
         {
             numOfLetters ++;
         }
@@ -60,10 +60,10 @@ int findSentenceNum(string input)
     {
         if (input[i] == '.' || input[i] == '?' || input[i] == '!')
         {
-            numOfSentences ++
+            numOfSentences ++;
         }
     }
-    return numOfSentences
+    return numOfSentences;
 }
 
 long lettersPer100(string words)
