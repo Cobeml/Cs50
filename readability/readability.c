@@ -25,31 +25,51 @@ int main(void)
 }
 
 
-int numOfLetters = 0;
-int numOfWords = 0;
-int numOfSentences = 0;
-
-for (i = 0; i < strlen(text) + 1; i++)
+int findLetterNum(string input)
 {
-    if ((text[i] >= a && text[i] <= z) || (text[i] >= A && text[i] <= Z)
+    int numOfLetters = 0;
+    for (i = 0; i < strlen(input); i++)
     {
-        numOfLetters ++;
+        if ((input[i] >= a && input[i] <= z) || (input[i] >= A && input[i] <= Z)
+        {
+            numOfLetters ++;
+        }
     }
+    return numOfLetters;
+}
 
-    if ((text[i] == ' ' || text[i] == '\0') && text[i - 1] >= ! && text[i - 1] <= z)
+int findWordNum(string input)
+{
+    int numOfWords = 0;
+    for (i = 0; i < strlen(input) + 1; i++)
     {
-        numOfWords ++;
+        if ((input[i] == ' ' || input[i] == '\0') && input[i - 1] >= ! && input[i - 1] <= z)
+        {
+            numOfWords ++;
+        }
     }
+    return numOfWords;
+}
 
-    if (text[i] == '.' || text[i] == '?' || text[i] == '!')
+int findSentenceNum(string input)
+{
+    int numOfSentences = 0;
+    for (i = 0; i < strlen(input) + 1; i++)
     {
-        numOfSentences ++
+        if (input[i] == '.' || input[i] == '?' || input[i] == '!')
+        {
+            numOfSentences ++
+        }
     }
+    return numOfSentences
 }
 
 long lettersPer100(string words)
 {
-
+    return findLetterNum(words) / findWordNum(words) * 100;
 }
 
 long sentencesPer100(string words)
+{
+    return findSentenceNum(words) / findWordNum(words) * 100;
+}
