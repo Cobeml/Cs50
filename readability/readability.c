@@ -32,7 +32,7 @@ int findLetterNum(string input)
     int numOfLetters = 0;
     for (int i = 0; i < strlen(input); i++)
     {
-        if ((input[i] >= a && input[i] <= z) || (input[i] >= A && input[i] <= Z)
+        if ((input[i] >= 'a' && input[i] <= 'z') || (input[i] >= 'A' && input[i] <= 'Z')
         {
             numOfLetters ++;
         }
@@ -45,7 +45,7 @@ int findWordNum(string input)
     int numOfWords = 0;
     for (int i = 0; i < strlen(input) + 1; i++)
     {
-        if ((input[i] == ' ' || input[i] == '\0') && input[i - 1] >= ! && input[i - 1] <= z)
+        if ((input[i] == ' ' || input[i] == '\0') && input[i - 1] >= '!' && input[i - 1] <= 'z')
         {
             numOfWords ++;
         }
