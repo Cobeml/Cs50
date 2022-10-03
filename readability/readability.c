@@ -28,14 +28,17 @@ int numOfLetters = 0;
 int numOfWords = 0;
 int numOfSentences = 0;
 
-for (i = 0; i < strlen(text); i++)
+for (i = 0; i < strlen(text) + 1; i++)
 {
     if ((text[i] >= a && text[i] <= z) || (text[i] >= A && text[i] <= Z)
     {
         numOfLetters ++;
     }
 
-    if (text[i] == ' ' && (text[i - 1] >= ! || text[i - 1] <= z)
+    if ((text[i] == ' ' || text[i] == '\0') && text[i - 1] >= ! && text[i - 1] <= z)
+    {
+        numOfWords ++;
+    }
 
     if (text[i] == '.' || text[i] == '?' || text[i] == '!')
     {
@@ -45,7 +48,7 @@ for (i = 0; i < strlen(text); i++)
 
 long lettersPer100(string words)
 {
-
+    
 }
 
 long sentencesPer100(string words)
