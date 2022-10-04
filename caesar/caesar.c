@@ -54,11 +54,12 @@ string cipher(string text)
 {
     for (int i = 0; i < strlen(text); i++)
     {
-        if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z')
+        if (text[i] >= 'a' && text[i] <= 'z')
         {
             int plainLetterAsNumber = text[i];
-            int cipherLetterAsNumber = (plainLetterAsNumber + key)
+            int cipherLetterAsNumber = (plainLetterAsNumber -97 + key)
 
         }
+        else if (text[i] >= 'A' && text[i] <= 'Z')
     }
 }
