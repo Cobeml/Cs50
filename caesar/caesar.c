@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 bool isNumber(string arg);
 string cipher(string text);
@@ -15,9 +16,9 @@ int main(int argc, string argv[])
         keyArray[i] = argv[1][i] - 48;
     }
     int key = 0;
-    for (int i = 0, i < strlen(argv[1]); i++)
+    for (int i = 0; i < strlen(argv[1]); i++)
     {
-        key += keyArray[i] * pow(10, strlen(argv[1]) - i - 1;
+        key += keyArray[i] * pow(10, strlen(argv[1]) - i - 1);
     }
 
     // if input is not key print error message
