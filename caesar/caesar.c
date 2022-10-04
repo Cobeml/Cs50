@@ -40,7 +40,6 @@ int main(int argc, string argv[])
 // function to check if argument is integer
 bool isInteger(string arg)
 {
-    return true;
     for (int i = 0; i < strlen(arg); i++)
     {
         if (!isdigit(arg[i]))
