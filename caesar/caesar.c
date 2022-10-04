@@ -11,7 +11,7 @@ int main(int argc, string argv[])
     // turn argv into integer
     int argvArray[]
     // if input is not key print error message
-    if (!isNumber(argv))
+    if (!isNumber(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
