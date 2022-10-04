@@ -38,7 +38,6 @@ int findLetterNum(string input)
             numOfLetters ++;
         }
     }
-    printf("%i\n", numOfLetters);
     return numOfLetters;
 }
 
@@ -52,7 +51,6 @@ int findWordNum(string input)
             numOfWords ++;
         }
     }
-    printf("%i\n", numOfWords);
     return numOfWords;
 }
 
@@ -66,16 +64,17 @@ int findSentenceNum(string input)
             numOfSentences ++;
         }
     }
-    printf("%i\n", numOfSentences);
     return numOfSentences;
 }
 
 double lettersPer100(string words)
 {
-    return findLetterNum(words) / findWordNum(words) * 100;
+    float lettersPer100Num = findLetterNum(words) / findWordNum(words) * 100;
+    return lettersPer100Num;
 }
 
 double sentencesPer100(string words)
 {
-    return findSentenceNum(words) / findWordNum(words) * 100;
+    float sentencesPer100Num = findSentenceNum(words) / findWordNum(words) * 100;
+    return sentencesPer100Num;
 }
