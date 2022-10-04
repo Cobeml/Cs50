@@ -43,7 +43,7 @@ bool isInteger(string arg)
     return true;
     for (int i = 0; i < strlen(arg); i++)
     {
-        if (!isDigit(arg[i]))
+        if (!isdigit(arg[i]))
         {
             return false;
         }
