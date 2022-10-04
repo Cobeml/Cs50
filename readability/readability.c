@@ -4,8 +4,8 @@
 #include <string.h>
 
 // declare function
-double lettersPer100(string words);
-double sentencesPer100(string words);
+float lettersPer100(string words);
+float sentencesPer100(string words);
 
 int main(void)
 {
@@ -28,9 +28,9 @@ int main(void)
 }
 
 
-int findLetterNum(string input)
+float findLetterNum(string input)
 {
-    int numOfLetters = 0;
+    float numOfLetters = 0;
     for (int i = 0; i < strlen(input); i++)
     {
         if ((input[i] >= 'a' && input[i] <= 'z') || (input[i] >= 'A' && input[i] <= 'Z'))
@@ -41,9 +41,9 @@ int findLetterNum(string input)
     return numOfLetters;
 }
 
-int findWordNum(string input)
+float findWordNum(string input)
 {
-    int numOfWords = 0;
+    float numOfWords = 0;
     for (int i = 0; i < strlen(input) + 1; i++)
     {
         if ((input[i] == ' ' || input[i] == '\0') && input[i - 1] >= '!' && input[i - 1] <= 'z')
@@ -54,7 +54,7 @@ int findWordNum(string input)
     return numOfWords;
 }
 
-int findSentenceNum(string input)
+float findSentenceNum(string input)
 {
     int numOfSentences = 0;
     for (int i = 0; i < strlen(input); i++)
@@ -67,13 +67,13 @@ int findSentenceNum(string input)
     return numOfSentences;
 }
 
-double lettersPer100(string words)
+float lettersPer100(string words)
 {
     float lettersPer100Num = findLetterNum(words) / findWordNum(words) * 100.0;
     return lettersPer100Num;
 }
 
-double sentencesPer100(string words)
+float sentencesPer100(string words)
 {
     float sentencesPer100Num = findSentenceNum(words) / findWordNum(words) * 100.0;
     return sentencesPer100Num;
