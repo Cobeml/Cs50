@@ -10,20 +10,8 @@ int key = 0;
 
 int main(int argc, string argv[])
 {
-    // turn argv into integer
-    int keyArray[strlen(argv[1])];
-    for (int i = 0; i < strlen(argv[1]); i++)
-    {
-        keyArray[i] = argv[1][i] - 48;
-    }
-    for (int i = 0; i < strlen(argv[1]); i++)
-    {
-        key += keyArray[i] * pow(10, strlen(argv[1]) - i - 1);
-    }
-
     // if input is not key print error message
-
-    if (!isInteger(argv[1]) || key < 0 || argv[2] || !argv[1])
+    if (argc < 2 || !isInteger(argv[1]) || key < 0 || argv[2])
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -31,6 +19,17 @@ int main(int argc, string argv[])
     // otherwise get input of plaintext and use key to rotate into cypher text
     else
     {
+        // turn argv into integer
+        int keyArray[strlen(argv[1])];
+        for (int i = 0; i < strlen(argv[1]); i++)
+        {
+            keyArray[i] = argv[1][i] - 48;
+        }
+        for (int i = 0; i < strlen(argv[1]); i++)
+        {
+            key += keyArray[i] * pow(10, strlen(argv[1]) - i - 1);
+        }
+
         string plainText = get_string("plaintext:  ");
         string cipherText = cipher(plainText);
         printf("ciphertext: %s\n", cipherText);
@@ -69,7 +68,6 @@ string cipher(string text)
             int cipherLetterAsNumber = ((plainLetterAsNumber - 65 + key) % 26) + 65;
             char cipherLetter = cipherLetterAsNumber;
             cipherOutput[i] = cipherLetter;
-            // above line is not the way, what is the way?
         }
         else
         {
