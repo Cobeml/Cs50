@@ -3,5 +3,6 @@
 
 int main(int argc, string argv[])
 {
-    if (argv !>= 0)
+    int input = argv;
+    printf("%i\n", input);
 }
