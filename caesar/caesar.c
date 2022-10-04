@@ -60,18 +60,20 @@ string cipher(string text)
         {
             int plainLetterAsNumber = text[i];
             int cipherLetterAsNumber = ((plainLetterAsNumber - 97 + key) % 26) + 97;
-            cipherOutput[i] = cipherLetterAsNumber;
+            char cipherLetter = cipherLetterAsNumber;
+            cipherOutput += cipherLetter;
         }
         else if (text[i] >= 'A' && text[i] <= 'Z')
         {
             int plainLetterAsNumber = text[i];
             int cipherLetterAsNumber = ((plainLetterAsNumber - 65 + key) % 26) + 65;
-            cipherOutput[i] = cipherLetterAsNumber;
+            char cipherLetter = cipherLetterAsNumber;
+            cipherOutput += cipherLetter;
             // above line is not the way, what is the way?
         }
         else
         {
-            cipherOutput[i] = text[i];
+            cipherOutput += text[i];
         }
     }
     return cipherOutput;
