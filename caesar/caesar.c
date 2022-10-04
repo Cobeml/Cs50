@@ -8,8 +8,6 @@ string cipher(string text);
 
 int main(int argc, string argv[])
 {
-    // turn argv into integer
-    int argvArray[]
     // if input is not key print error message
     if (!isNumber(argv[1]))
     {
@@ -19,6 +17,9 @@ int main(int argc, string argv[])
     // otherwise get input of plaintext and use key to rotate into cypher text
     else
     {
+        // turn argv into integer
+        int key = atoi(argv(1));
+        printf("%i\n", key);
         string plainText = get_string("plaintext:  ");
         string cipherText = cipher(plainText);
         printf("ciphertext: %s\n", cipherText);
