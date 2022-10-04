@@ -69,12 +69,12 @@ int findSentenceNum(string input)
 
 double lettersPer100(string words)
 {
-    float lettersPer100Num = findLetterNum(words) / findWordNum(words) * 100;
+    float lettersPer100Num = findLetterNum(words) / findWordNum(words) * 100.0;
     return lettersPer100Num;
 }
 
 double sentencesPer100(string words)
 {
-    float sentencesPer100Num = findSentenceNum(words) / findWordNum(words) * 100;
+    float sentencesPer100Num = findSentenceNum(words) / findWordNum(words) * 100.0;
     return sentencesPer100Num;
 }
