@@ -21,6 +21,7 @@ int main(int argc, string argv[])
         key += keyArray[i] * pow(10, strlen(argv[1]) - i - 1);
     }
 
+    string commandLineArgument = argv -
     // if input is not key print error message
     if (!isInteger(argv[1]) || key < 0)
     {
