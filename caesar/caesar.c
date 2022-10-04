@@ -60,19 +60,19 @@ string cipher(string text)
             int plainLetterAsNumber = text[i];
             int cipherLetterAsNumber = ((plainLetterAsNumber - 97 + key) % 26) + 97;
             char cipherLetter = cipherLetterAsNumber;
-            strncat(cipherOutput, &cipherLetter, 1);
+            cipherOutput[i] = cipherLetter;
         }
         else if (text[i] >= 'A' && text[i] <= 'Z')
         {
             int plainLetterAsNumber = text[i];
             int cipherLetterAsNumber = ((plainLetterAsNumber - 65 + key) % 26) + 65;
             char cipherLetter = cipherLetterAsNumber;
-            strncat(cipherOutput, &cipherLetter, 1);
+            cipherOutput[i] = cipherLetter;
             // above line is not the way, what is the way?
         }
         else
         {
-            strncat(cipherOutput, &text[i], 1);
+            cipherOutput[i] = text[i];
         }
     }
     return cipherOutput;
