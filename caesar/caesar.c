@@ -57,7 +57,7 @@ string cipher(string text)
         if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z')
         {
             int plainLetterAsNumber = text[i];
-            int cipherLetterAsNumber = (plainLetterAsNumber)
+            int cipherLetterAsNumber = (plainLetterAsNumber + key)
 
         }
     }
