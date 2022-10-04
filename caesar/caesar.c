@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     }
 
     // if input is not key print error message
-    if (!isNumber(argv[1]))
+    if (!isNumber(argv[1]) && key)
     {
         printf("Usage: ./caesar key\n");
         return 1;
