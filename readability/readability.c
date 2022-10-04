@@ -69,12 +69,12 @@ float findSentenceNum(string input)
 
 float lettersPer100(string words)
 {
-    float lettersPer100Num = findLetterNum(words) / findWordNum(words) * 100.0;
-    return lettersPer100Num;
+    float lettersPer100Num = findLetterNum(words) / findWordNum(words);
+    return lettersPer100Num * 100.0;
 }
 
 float sentencesPer100(string words)
 {
-    float sentencesPer100Num = findSentenceNum(words) / findWordNum(words) * 100.0;
-    return sentencesPer100Num;
+    float sentencesPer100Num = findSentenceNum(words) / findWordNum(words);
+    return sentencesPer100Num * 100.0;
 }
