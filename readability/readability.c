@@ -15,10 +15,12 @@ int main(void)
     double index = 0.0588 * lettersPer100(text) - 0.296 * sentencesPer100(text) - 15.8;
     int roundedIndex = round(index);
     // print output based on index
-    if (index >= 16) {
-        printf ("Grade 16+\n");
+    if (index >= 16)
+    {
+        printf("Grade 16+\n");
     }
-    else if (index < 1) {
+    else if (index < 1)
+    {
         printf("Before Grade 1\n");
     }
     else
@@ -27,7 +29,7 @@ int main(void)
     }
 }
 
-
+//funtion to find amount of letters
 float findLetterNum(string input)
 {
     float numOfLetters = 0;
@@ -41,6 +43,7 @@ float findLetterNum(string input)
     return numOfLetters;
 }
 
+//function to find amount of words
 float findWordNum(string input)
 {
     float numOfWords = 0;
@@ -54,6 +57,7 @@ float findWordNum(string input)
     return numOfWords;
 }
 
+//function to fing amount of sentences
 float findSentenceNum(string input)
 {
     int numOfSentences = 0;
@@ -67,6 +71,7 @@ float findSentenceNum(string input)
     return numOfSentences;
 }
 
+//functions to compute letters and sentences per 100 words
 float lettersPer100(string words)
 {
     float lettersPer100Num = findLetterNum(words) / findWordNum(words);
