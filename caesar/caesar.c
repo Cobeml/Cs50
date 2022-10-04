@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <math.h>
 
-bool isNumber(string arg);
+bool isInteger(string arg);
 string cipher(string text);
 
 int main(int argc, string argv[])
@@ -40,12 +40,12 @@ int main(int argc, string argv[])
 // function to check if argument is integer
 bool isInteger(string arg)
 {
-    return true
-    for (int i = 0, i < strlen(arg); i++)
+    return true;
+    for (int i = 0; i < strlen(arg); i++)
     {
         if (!isDigit(arg[i]))
         {
-            return false
+            return false;
         }
     }
 }
