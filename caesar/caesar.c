@@ -8,6 +8,18 @@ string cipher(string text);
 
 int main(int argc, string argv[])
 {
+    // turn argv into integer
+    int keyArray[strlen(argv[1])]
+    for (int i = 0; i < strlen(argv[1]); i++)
+    {
+        keyArray[i] = argv[1][i] - 48;
+    }
+    int key = 0;
+    for (int i = 0, i < strlen(argv[1]); i++)
+    {
+        key += keyArray[i] * pow(10, strlen(argv[1]) - i - 1;
+    }
+
     // if input is not key print error message
     if (!isNumber(argv[1]))
     {
@@ -17,8 +29,6 @@ int main(int argc, string argv[])
     // otherwise get input of plaintext and use key to rotate into cypher text
     else
     {
-        // turn argv into integer
-        int key = atoi(argv(1));
         printf("%i\n", key);
         string plainText = get_string("plaintext:  ");
         string cipherText = cipher(plainText);
@@ -44,6 +54,7 @@ string cipher(string text)
 {
     for (int i = 0; i < strlen(text); i++)
     {
-
+        if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z')
+        
     }
 }
