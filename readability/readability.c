@@ -13,7 +13,7 @@ int main(void)
     string text = get_string("Text: ");
     // find index from text
     double index = 0.0588 * lettersPer100(text) - 0.296 * sentencesPer100(text) - 15.8;
-    double roundedIndex = round(index);
+    int roundedIndex = round(index);
     // print output based on index
     if (index >= 16) {
         printf ("Grade 16+\n");
@@ -23,7 +23,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %f\n", roundedIndex);
+        printf("Grade %i\n", roundedIndex);
     }
 }
 
