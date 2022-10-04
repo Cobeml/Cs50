@@ -55,6 +55,7 @@ string cipher(string text)
     string cipherOutput = text;
     for (int i = 0; i < strlen(text); i++)
     {
+        // roates lowercase
         if (text[i] >= 'a' && text[i] <= 'z')
         {
             int plainLetterAsNumber = text[i];
@@ -62,6 +63,7 @@ string cipher(string text)
             char cipherLetter = cipherLetterAsNumber;
             cipherOutput[i] = cipherLetter;
         }
+        // rotates uppercase
         else if (text[i] >= 'A' && text[i] <= 'Z')
         {
             int plainLetterAsNumber = text[i];
@@ -69,6 +71,7 @@ string cipher(string text)
             char cipherLetter = cipherLetterAsNumber;
             cipherOutput[i] = cipherLetter;
         }
+        // other characters and spaces not rotated
         else
         {
             cipherOutput[i] = text[i];
