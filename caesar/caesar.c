@@ -53,7 +53,7 @@ bool isInteger(string arg)
 //function to create ciphertext from plaintext
 string cipher(string text)
 {
-    string cipherOutput;
+    string cipherOutput = "";
     for (int i = 0; i < strlen(text); i++)
     {
         if (text[i] >= 'a' && text[i] <= 'z')
