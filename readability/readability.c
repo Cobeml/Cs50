@@ -23,7 +23,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %i\n", roundedIndex);
+        printf("Grade %f\n", roundedIndex);
     }
 }
 
