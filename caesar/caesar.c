@@ -6,6 +6,7 @@
 
 bool isInteger(string arg);
 string cipher(string text);
+int key = 0;
 
 int main(int argc, string argv[])
 {
@@ -15,7 +16,6 @@ int main(int argc, string argv[])
     {
         keyArray[i] = argv[1][i] - 48;
     }
-    int key = 0;
     for (int i = 0; i < strlen(argv[1]); i++)
     {
         key += keyArray[i] * pow(10, strlen(argv[1]) - i - 1);
@@ -67,6 +67,7 @@ string cipher(string text)
             int plainLetterAsNumber = text[i];
             int cipherLetterAsNumber = ((plainLetterAsNumber - 65 + key) % 26) + 65;
             cipherOutput[i] = cipherLetterAsNumber;
+            // above line is not the way, what is the way?
         }
         else
         {
