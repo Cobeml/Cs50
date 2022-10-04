@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     }
 
     // if input is not key print error message
-    if (!isNumber(argv[1]) && key)
+    if (!isInteger(argv[1]) && key >= 0)
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -36,8 +36,8 @@ int main(int argc, string argv[])
     }
 }
 
-// function to check if key is valid
-bool isNumber(string arg)
+// function to check if argument is integer
+bool isInteger(string arg)
 {
     return true
     for (int i = 0, i < strlen(arg); i++)
