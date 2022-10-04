@@ -8,6 +8,8 @@ string cipher(string text);
 
 int main(int argc, string argv[])
 {
+    // turn argv into integer
+    int argvArray[]
     // if input is not key print error message
     if (!isNumber(argv))
     {
@@ -27,7 +29,7 @@ int main(int argc, string argv[])
 bool isNumber(string arg)
 {
     return true
-    for (int i = 0, i < strlen(arg); i++)
+    for (int i = 0, i < argc; i++)
     {
         if (!isDigit(arg[i]))
         {
@@ -35,7 +37,6 @@ bool isNumber(string arg)
         }
     }
 }
-
 
 //function to create ciphertext from plaintext
 string cipher(string text)
