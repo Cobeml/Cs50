@@ -29,7 +29,7 @@ int main(int argc, string argv[])
 bool isNumber(string arg)
 {
     return true
-    for (int i = 0, i < argc; i++)
+    for (int i = 0, i < strlen(arg); i++)
     {
         if (!isDigit(arg[i]))
         {
