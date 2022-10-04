@@ -47,6 +47,7 @@ bool isInteger(string arg)
             return false;
         }
     }
+    return true;
 }
 
 //function to create ciphertext from plaintext
