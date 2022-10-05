@@ -1,10 +1,10 @@
 sort1 uses: TODO
 
-How do you know?: TODO
+How do you know?: 0m0.183s for sorted5000
 
 sort2 uses: TODO
 
-How do you know?: TODO
+How do you know?: 0m0.046s for sorted5000
 
 sort3 uses: TODO
 
