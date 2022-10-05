@@ -1,11 +1,11 @@
 sort1 uses: selection sort
 
-How do you know?: 0m0.183s for sorted5000
+How do you know?: because it takes the most time to sort an already sorted list.
 
 sort2 uses: bubble sort
 
-How do you know?: 0m0.046s for sorted5000
+How do you know?: because it takes the least time to sort an already sorted list
 
 sort3 uses: merge sort
 
-How do you know?: 0m0.070s
+How do you know?: because it takes more time than sort2 and less time than sort1 with an already sorted list.
