@@ -1,6 +1,6 @@
 sort1 uses: selection sort
 
-How do you know?: because it takes the most time to sort an already sorted list.
+How do you know?: because it takes the most time to sort an already sorted list. 0m0.085s./
 
 sort2 uses: bubble sort
 
