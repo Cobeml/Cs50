@@ -4,7 +4,7 @@ How do you know?: because it takes the least time to sort an already sorted list
 
 sort2 uses: merge sort
 
-How do you know?: because it takes more time than sort2 and less time than sort1 with an already sorted list and a consistent amount of time for any list.
+How do you know?: because it takes a consistent short amount of time for any list.
 
 sort3 uses: selection sort
 
