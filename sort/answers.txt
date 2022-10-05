@@ -4,7 +4,7 @@ How do you know?: because it takes the most time to sort an already sorted list.
 
 sort2 uses: bubble sort
 
-How do you know?: because it takes the least time to sort an already sorted list
+How do you know?: because it takes the least time to sort an already sorted list. 0m0.394s for sorted 50000
 
 sort3 uses: merge sort
 
