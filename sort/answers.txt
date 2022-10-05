@@ -1,10 +1,10 @@
-sort1 uses: merge sort
+sort1 uses: bubble sort
 
-How do you know?: because it takes more time than sort2 and less time than sort1 with an already sorted list. 0m0.423s for sorted 50000
+How do you know?: because it takes the least time to sort an already sorted list and a lot of time to sort a reversed list.
 
-sort2 uses: bubble sort
+sort2 uses: merge sort
 
-How do you know?: because it takes the least time to sort an already sorted list. 0m0.394s for sorted 50000. 0m0.424s for reversed 50000
+How do you know?: because it takes more time than sort2 and less time than sort1 with an already sorted list and a consistent amount of time for any list.
 
 sort3 uses: selection sort
 
