@@ -4,7 +4,7 @@ How do you know?: because it takes more time than sort2 and less time than sort1
 
 sort2 uses: bubble sort
 
-How do you know?: because it takes the least time to sort an already sorted list. 0m0.394s for sorted 50000
+How do you know?: because it takes the least time to sort an already sorted list. 0m0.394s for sorted 50000. 0m0.424s for reversed 50000
 
 sort3 uses: selection sort
 
