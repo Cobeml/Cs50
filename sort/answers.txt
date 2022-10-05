@@ -8,4 +8,4 @@ How do you know?: because it takes the least time to sort an already sorted list
 
 sort3 uses: merge sort
 
-How do you know?: because it takes more time than sort2 and less time than sort1 with an already sorted list.
+How do you know?: because it takes more time than sort2 and less time than sort1 with an already sorted list. 0m3.328s for reversed50000
