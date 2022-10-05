@@ -70,7 +70,7 @@ bool vote(string name)
     {
         if (name == candidates[i].name)
         {
-            candidates[i].votes ++
+            candidates[i].votes ++;
             return true;
         }
     }
@@ -81,7 +81,7 @@ bool vote(string name)
 void print_winner(void)
 {
     string winner = candidates[0].name;
-    int winning_votes = candidates[0].votes
+    int winning_votes = candidates[0].votes;
     for (int i = 1; i < candidate_count; i++)
     {
         if (candidates[i].votes > winning_votes)
@@ -89,7 +89,7 @@ void print_winner(void)
             winner = candidates[i].name;
             winning_votes = candidates[i].votes;
         }
-        else if (candidates[i].votes = winning_votes)
+        else if (candidates[i].votes == winning_votes)
         {
             winner += "\n";
             winner += candidates[i].name;
