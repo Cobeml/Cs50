@@ -214,7 +214,6 @@ void print_winner(void)
 }
 
 // checks if there is a cycle
-// lock pair did not correctly skip pair if it created a cycle
 bool checkcycle(int pair_winner, int pair_loser)
 {
     if (locked[pair_loser][pair_winner] == true)
