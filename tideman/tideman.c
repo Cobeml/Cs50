@@ -193,8 +193,8 @@ void print_winner(void)
 {
     bool dominated;
     for (int i = 0; i < candidate_count; i++)
-    dominated = false;
     {
+        dominated = false;
         for (int j = 0; j < candidate_count; j++)
         {
             if (locked[i][j] == true)
