@@ -217,10 +217,6 @@ bool checkcycle(int pair_winner, int pair_loser)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (j == pair_loser)
-            {
-                domination_count ++;
-            }
             else if (locked[i][j] == true)
             {
                 domination_count ++;
@@ -228,7 +224,7 @@ bool checkcycle(int pair_winner, int pair_loser)
             }
         }
     }
-    if (domination_count == candidate_count)
+    if (domination_count == candidate_count - 1)
     {
         return true;
     }
