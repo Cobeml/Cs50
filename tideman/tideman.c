@@ -218,6 +218,7 @@ bool checkcycle(int pair_winner, int pair_loser)
     }
     for (int i = 0; i < candidate_count; i++)
     {
+        // use recursion to check if cycle
         if (locked[pair_loser][i] == true && checkcycle(pair_winner, i))
         {
             return true;
