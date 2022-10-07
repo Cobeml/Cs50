@@ -147,6 +147,7 @@ void sort_pairs(void)
 {
     for (int j = 0; true; j++)
     {
+        // infinite loop unless switch_count == 0
         int switch_count = 0;
         for (int i = 0; i < pair_count - 1; i ++)
         {
