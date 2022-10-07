@@ -214,7 +214,7 @@ bool checkcycle(int pair_winner, int pair_loser)
     int domination_count = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0, j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
             if (j == pair_loser)
             {
