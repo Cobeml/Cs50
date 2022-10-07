@@ -53,7 +53,7 @@ int main(int argc, string argv[])
     {
         candidates[i] = argv[i + 1];
     }
-
+printf("%s\n", candidates[0]);
     // Clear graph of locked in pairs
     for (int i = 0; i < candidate_count; i++)
     {
