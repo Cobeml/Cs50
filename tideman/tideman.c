@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max number of candidates
 #define MAX 9
@@ -53,7 +54,7 @@ int main(int argc, string argv[])
     {
         candidates[i] = argv[i + 1];
     }
-printf("%s%s%s\n", candidates[0],candidates[1],candidates[2]);
+
     // Clear graph of locked in pairs
     for (int i = 0; i < candidate_count; i++)
     {
