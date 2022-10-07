@@ -205,9 +205,9 @@ void print_winner(void)
         if (dominated == false)
         {
             printf("%s\n", candidates[i]);
+            return;
         }
     }
-    return;
 }
 
 bool checkcycle(int pair_winner, int pair_loser)
