@@ -202,11 +202,11 @@ void print_winner(void)
                 break;
             }
         }
-    }
-    if (dominated == false)
+        if (dominated == false)
         {
             printf("%s\n", candidates[i]);
         }
+    }
     return;
 }
 
