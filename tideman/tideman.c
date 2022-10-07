@@ -235,7 +235,17 @@ bool checkcycle(int pair_winner, int pair_loser)
             }
         }
     }
-    if (domination[i] == true)
+
+    int domination_count = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (domination[i] == true)
+        {
+            domination_count ++;
+        }
+    }
+
+    if (domination_count == candidate_count)
     {
         return true;
     }
