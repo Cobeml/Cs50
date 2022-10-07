@@ -162,7 +162,6 @@ void sort_pairs(void)
 
                 switch_count ++;
             }
-            printf("%i%i\n%i%i\n%i%i\n", pairs[0].winner, pairs[0].loser, pairs[1].winner, pairs[1].loser, pairs[2].winner, pairs[2].loser);
         }
 
         if (switch_count == 0)
