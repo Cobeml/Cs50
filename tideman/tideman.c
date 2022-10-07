@@ -161,20 +161,78 @@ void sort_pairs(void)
                 switch_count ++;
             }
         }
-        return;
+
+        if (switch_count == 0)
+        {
+            return;
+        }
     }
 }
+
+bool checkcycle(int pair_winner, int pair_loser);
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
-    return;
+    for (int i = 0; i < pair_count; i++)
+    {
+        if (!checkcycle(pair[i].winner, pair[i].loser))
+        {
+            locked[pair[i].winner][pair[i].loser] = true;
+        }
+        else
+        {
+            return;
+        }
+    }
 }
 
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        bool dominated = false;
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (locked[i][j] == true)
+            {
+                dominated = true;
+                break;
+            }
+        }
+        if (dominated == false)
+        {
+            printf("%s\n", candidates[i]);
+        }
+    }
     return;
+}
+
+bool checkcycle(int pair_winner, int pair_loser)
+{
+    int domination_count = 0;
+    for (int i = 0, i < candidate_count; i++)
+    {
+        for (int j = 0, j < candidate_count; j++)
+        {
+            if (j == pair_loser)
+            {
+                domination_count ++;
+            }
+            else if (locked[i][j] == true)
+            {
+                domination_count ++;
+                break;
+            }
+        }
+    }
+    if (domination_count == candidate_count)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
