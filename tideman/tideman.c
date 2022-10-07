@@ -146,7 +146,7 @@ void add_pairs(void)
 // sort_pairs did not correctly sort pairs
 void sort_pairs(void)
 {
-    for (int j = 0; j == -1; j++)
+    for (int j = 0; true; j++)
     {
         int switch_count = 0;
         for (int i = 0; i < pair_count - 1; i ++)
