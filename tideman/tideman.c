@@ -31,7 +31,7 @@ bool vote(int rank, string name, int ranks[]);
 void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
-printf("%s%s\n%s%s\n%s%s\n", pairs[0].winner, pairs[0].loser, pairs[1].winner, pairs[1].loser, pairs[2].winner, pairs[2].loser);
+printf("Hello\n");
 void lock_pairs(void);
 void print_winner(void);
 
