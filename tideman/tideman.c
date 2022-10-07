@@ -217,45 +217,16 @@ void print_winner(void)
 // lock pair did not correctly skip pair if it created a cycle
 bool checkcycle(int pair_winner, int pair_loser)
 {
-    bool domination[candidate_count];
-    for (int i = 0; i < candidate_count; i++)
-    {
-        domination[i] = false;
-    }
-
-    domination[pair_loser] = true;
-
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            if (j == pair_loser)
-            {
-                break;
-            }
-            else if (locked[i][j] == true)
-            {
-                domination[j] = true;
-                break;
-            }
-        }
-    }
-
-    int domination_count = 0;
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (domination[i] == true)
-        {
-            domination_count ++;
-        }
-    }
-
-    if (domination_count == candidate_count)
+    if (locked[pair_loser][pair_winner] == true)
     {
         return true;
     }
-    else
+    for (int i = 0; i < candidate_count; i++)
     {
-        return false;
+        if (locked[pair_loser][i] == true && checkcycle(pair_winner, i))
+        {
+            return true;
+        }
     }
+    return false;
 }
