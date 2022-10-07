@@ -212,19 +212,30 @@ void print_winner(void)
 
 bool checkcycle(int pair_winner, int pair_loser)
 {
-    int domination_count = 0;
+    bool domination[candidate_count];
+    for (int i = 0; i < candidate_count; i++)
+    {
+        domination[i] = false;
+    }
+
+    domination[pair_loser] = true;
+
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (locked[i][j] == true)
+            if (j == pair_loser)
             {
-                domination_count ++;
+                break;
+            }
+            else if (locked[i][j] == true)
+            {
+                domination[j] = true;
                 break;
             }
         }
     }
-    if (domination_count == candidate_count - 1)
+    if (domination[i] == true)
     {
         return true;
     }
