@@ -176,9 +176,9 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        if (!checkcycle(pair[i].winner, pair[i].loser))
+        if (!checkcycle(pairs[i].winner, pairs[i].loser))
         {
-            locked[pair[i].winner][pair[i].loser] = true;
+            locked[pairs[i].winner][pairs[i].loser] = true;
         }
         else
         {
