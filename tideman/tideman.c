@@ -143,6 +143,8 @@ void add_pairs(void)
 }
 
 // Sort pairs in decreasing order by strength of victory
+// sort_pairs did not correctly sort pairs
+    sort_pairs did not correctly sort pairs
 void sort_pairs(void)
 {
     for (int j = 0; j == -1; j++)
@@ -211,6 +213,8 @@ void print_winner(void)
     }
 }
 
+// checks if there is a cycle
+// lock pair did not correctly skip pair if it created a cycle
 bool checkcycle(int pair_winner, int pair_loser)
 {
     bool domination[candidate_count];
