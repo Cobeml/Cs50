@@ -34,7 +34,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
-BYTE redavg = 0;
+
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -68,6 +68,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             blueavg = round(bufferblue / 3);
             greenavg = round(buffergreen / 3);
             redavg = round(bufferred / 3);
+
+            image[i][j].rgbtBlue = blueavg;
+            image[i][j].rgbtGreen = greenavg;
+            image[i][j].rgbtRed = redavg;
         }
     }
     return;
