@@ -37,41 +37,43 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 RGBTRIPLE blacken(RGBTRIPLE pixel)
 {
-
+    pixel.rgbtGreen = 0;
+    pixel.rgbtBlue = 0;
+    pixel.rgbtRed = 0;
 }
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
-        RGBTRIPLE surrounding_pixels[9];
-        surrounding_pixels[0] = image[i][j];
-        if (i == 0)
-        {
-            surrounding_pixels[1] = black;
-            surrounding_pixels[2] = black;
-            surrounding_pixels[3] = black;
-        }
-        if (i == height - 1)
-        {
-            surrounding_pixels[4] = black;
-            surrounding_pixels[5] = black;
-            surrounding_pixels[6] = black;
-        }
-
         for (int j = 0; j < width; j++)
         {
+            RGBTRIPLE surrounding_pixels[9];
+            surrounding_pixels[0] = image[i][j];
+            // if on edge, treat ones over the edge as black
+            if (i == 0)
+            {
+                blacken(surrounding_pixels[1]);
+                blacken(surrounding_pixels[2]);
+                blacken(surrounding_pixels[3]);
+            }
+            if (i == height - 1)
+            {
+                blacken(surrounding_pixels[4]);
+                blacken(surrounding_pixels[5]);
+                blacken(surrounding_pixels[6]);
+            }
             if (j == 0)
             {
-                surrounding_pixels[1] = black;
-                surrounding_pixels[4] = black;
-                surrounding_pixels[7] = black;
+                blacken(surrounding_pixels[1]);
+                blacken(surrounding_pixels[4]);
+                blacken(surrounding_pixels[7]);
             }
             if (j == width - 1)
             {
-                surrounding_pixels[3] = black;
-                surrounding_pixels[6] = black;
-                surrounding_pixels[8] = black;
+                blacken(surrounding_pixels[3]);
+                blacken(surrounding_pixels[6]);
+                blacken(surrounding_pixels[8]);
             }
             RGBTRIPLE notblack[8];
             notblack[0] = image[i - 1][j - 1];
