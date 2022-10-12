@@ -35,10 +35,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-RGBTRIPLE black;
-black.rgbtRed = 0;
-black.rgbtGreen = 0;
-black.rgbtBlue = 0;
+RGBTRIPLE blacken(RGBTRIPLE pixel)
+{
+
+}
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -107,6 +107,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             greenavg = round(buffergreen / 3);
             redavg = round(bufferred / 3);
 
+            // reassignment might need pointers or smthing idk
             image[i][j].rgbtBlue = blueavg;
             image[i][j].rgbtGreen = greenavg;
             image[i][j].rgbtRed = redavg;
