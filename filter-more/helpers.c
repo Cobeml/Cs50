@@ -73,15 +73,23 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 surrounding_pixel[6] = black;
                 surrounding_pixel[8] = black;
             }
-            
-            surrounding_pixels[1] = image[i - 1][j - 1];
-            surrounding_pixels[2] = image[i - 1][j];
-            surrounding_pixels[3] = image[i - 1][j + 1];
-            surrounding_pixels[4] = image[i + 1][j - 1];
-            surrounding_pixels[5] = image[i + 1][j];
-            surrounding_pixels[6] = image[i + 1][j + 1];
-            surrounding_pixels[7] = image[i][j - 1];
-            surrounding_pixels[8] = image[i][j + 1];
+            RGBTRIPLE notblack[8];
+            notblack[0] = image[i - 1][j - 1];
+            notblack[1] = image[i - 1][j];
+            notblack[2] = image[i - 1][j + 1];
+            notblack[3] = image[i + 1][j - 1];
+            notblack[4] = image[i + 1][j];
+            notblack[5] = image[i + 1][j + 1];
+            snotblack[6] = image[i][j - 1];
+            notblack[7] = image[i][j + 1];
+
+            for (int h = 0; h < 8; h++)
+            {
+                if (surrounding_pixel[h + 1] != black)
+                {
+                    surrounging_pixel[h + 1] = notblack[h];
+                }
+            }
 
             BYTE redavg = 0;
             BYTE greenavg = 0;
