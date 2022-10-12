@@ -58,9 +58,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             BYTE blueavg = 0;
             for (int h = 0; h < 9; h++)
             {
-                blueavg += surrounding_pixel[h].rgbtBlue;
-                greenavg += surrounding_pixel[h].rgbtGreen;
-                redavg += surrounding_pixel[h].rgbtRed;
+                blueavg += surrounding_pixels[h].rgbtBlue;
+                greenavg += surrounding_pixels[h].rgbtGreen;
+                redavg += surrounding_pixels[h].rgbtRed;
             }
             BYTE bufferblue = blueavg;
             BYTE buffergreen = greenavg;
