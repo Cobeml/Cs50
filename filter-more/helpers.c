@@ -23,13 +23,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width / 2; j++)
         {
-            RGBTRIPLE *pixel = &image[i][j];
-            RGBTRIPLE *reverse = &image[i][width - j - 1];
-            RGBTRIPLE buffer = *pixel;
-            *pixel = *reverse;
-            *reverse = buffer;
+            RGBTRIPLE pixel = image[i][j];
+            RGBTRIPLE reverse = image[i][width - j - 1];
+            RGBTRIPLE buffer = pixel;
+            pixel = reverse;
+            reverse = buffer;
         }
     }
     return;
