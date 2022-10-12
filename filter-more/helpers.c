@@ -87,7 +87,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             for (int h = 0; h < 8; h++)
             {
-                if (surrounding_pixels[h + 1] != black)
+                if (surrounding_pixels[h + 1].rgbtGreen != 0 && surrounding_pixels[h + 1].rgbtBlue != 0 && surrounding_pixels[h + 1].rgbtRed != 0)
                 {
                     surrounding_pixels[h + 1] = notblack[h];
                 }
