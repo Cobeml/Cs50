@@ -38,7 +38,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 RGBTRIPLE surrounding_pixels[9];
 void add_surrounding_pixel(int ID, RGBTRIPLE pixel)
 {
-    surrounding_pixels[ID] = 
+    if (pixel.rgbtRed == NULL && pixel.rgbtGreen == NULL && pixel.rgbtBlue == NULL)
+    {
+        
+    }
+    surrounding_pixels[ID] = pixel;
 }
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
