@@ -54,14 +54,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 surrounding_pixel[2] = black;
                 surrounding_pixel[3] = black;
             }
+            if (i = height - 1)
+            {
+                surrounding_pixel[4] = black;
+                surrounding_pixel[5] = black;
+                surrounding_pixel[6] = black;
+            }
+            if (j = 0)
             surrounding_pixels[1] = image[i - 1][j - 1];
             surrounding_pixels[2] = image[i - 1][j];
             surrounding_pixels[3] = image[i - 1][j + 1];
-            surrounding_pixels[4] = image[i][j - 1];
-            surrounding_pixels[5] = image[i + 1][j - 1];
-            surrounding_pixels[6] = image[i + 1][j];
-            surrounding_pixels[7] = image[i][j + 1];
-            surrounding_pixels[8] = image[i + 1][j + 1];
+            surrounding_pixels[4] = image[i + 1][j - 1];
+            surrounding_pixels[5] = image[i + 1][j];
+            surrounding_pixels[6] = image[i + 1][j + 1];
+            surrounding_pixels[7] = image[i][j - 1];
+            surrounding_pixels[8] = image[i][j + 1];
 
             BYTE redavg = 0;
             BYTE greenavg = 0;
