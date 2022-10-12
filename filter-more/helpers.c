@@ -35,10 +35,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-RGBTRIPLE blur_pixel(RGBTRIPLE pixel)
-{
-    
-}
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
