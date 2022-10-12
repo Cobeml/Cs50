@@ -35,7 +35,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-RGBTRIPLE blacken(RGBTRIPLE pixel)
+void blacken(RGBTRIPLE pixel)
 {
     pixel.rgbtGreen = 0;
     pixel.rgbtBlue = 0;
