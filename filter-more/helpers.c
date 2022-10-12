@@ -80,7 +80,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             notblack[3] = image[i + 1][j - 1];
             notblack[4] = image[i + 1][j];
             notblack[5] = image[i + 1][j + 1];
-            snotblack[6] = image[i][j - 1];
+            notblack[6] = image[i][j - 1];
             notblack[7] = image[i][j + 1];
 
             for (int h = 0; h < 8; h++)
