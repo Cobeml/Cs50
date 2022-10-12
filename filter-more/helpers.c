@@ -26,8 +26,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             RGBTRIPLE pixel = image[i][j];
             RGBTRIPLE reverse = image[i][width - j];
-            RGBTRIPLE buffer = 0;
-            buffer = pixel;
+            RGBTRIPLE buffer = pixel;
             pixel = reverse;
             reverse = buffer;
         }
