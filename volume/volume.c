@@ -43,10 +43,10 @@ int main(int argc, char *argv[])
     for (int i = 0; *(input + 45 + (2 * i)) != NULL; i ++)
     {
         fread(&buffer, 2, 1, input + 45 + (2 * i));
-        buffer *= 2;
-        fwrite(&buffer, 2, 1, output + 45 + (2 * i));
+        buffer *= factor;
+        fwrite(&buffer, 2, 1, output);
     }
-    
+
     // Close files
     fclose(input);
     fclose(output);
