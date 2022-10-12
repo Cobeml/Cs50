@@ -37,10 +37,10 @@ int main(int argc, char *argv[])
     for (int i = 0; i < 44; i++)
     {
         uint8_t header_byte = *(input + i);
-        fprintf(output, "%i", header)
+        fprintf(output, "%i", header_byte);
     }
     // TODO: Read samples from input file and write updated data to output file
-
+    
     // Close files
     fclose(input);
     fclose(output);
