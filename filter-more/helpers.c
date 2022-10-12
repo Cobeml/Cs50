@@ -36,9 +36,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 RGBTRIPLE black;
-black.rgbtred = 0;
-black.rgbtgreen = 0;
-black.rgbtblue = 0;
+black.rgbtRed = 0;
+black.rgbtGreen = 0;
+black.rgbtBlue = 0;
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
