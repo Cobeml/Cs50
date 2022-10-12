@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
         fprintf(output, "%i", header_byte);
     }
     // TODO: Read samples from input file and write updated data to output file
-    
+    for (int i = 0)
     // Close files
     fclose(input);
     fclose(output);
