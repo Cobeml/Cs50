@@ -55,10 +55,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             BYTE redavg = 0;
             BYTE greenavg = 0;
-            BYTE 
+            BYTE blueavg = 0;
             for (int h = 0; h < 9; h++)
             {
-                surrounding_pixel[h]
+                surrounding_pixel[h] 
             }
         }
     }
