@@ -36,8 +36,8 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     for (int i = 0; i < 44; i++)
     {
-        uint8_t 
-        fprintf(output, )
+        uint8_t header_byte = *(input + i);
+        fprintf(output, "%i", header)
     }
     // TODO: Read samples from input file and write updated data to output file
 
