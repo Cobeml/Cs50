@@ -38,9 +38,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 RGBTRIPLE surrounding_pixels[9];
 void add_surrounding_pixel(int ID, RGBTRIPLE pixel)
 {
+    RGBT
     if (pixel.rgbtRed == NULL && pixel.rgbtGreen == NULL && pixel.rgbtBlue == NULL)
     {
-        
+
     }
     surrounding_pixels[ID] = pixel;
 }
