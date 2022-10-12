@@ -25,11 +25,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            RGBTRIPLE *pixel = image[i][j];
-            RGBTRIPLE *reverse = image[i][width - j - 1];
-            RGBTRIPLE *buffer = *pixel;
-            *pixel = *reverse;
-            *reverse = *buffer;
+            RGBTRIPLE *pixel = &image[i][j];
+            RGBTRIPLE *reverse = &image[i][width - j - 1];
+            RGBTRIPLE *buffer = malloc(sizeof(RGBTRIPLE));
+            buffer = pixel;
+            pixel = reverse;
+            reverse = buffer;
+            free(buffer);
         }
     }
     return;
