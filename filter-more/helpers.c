@@ -91,7 +91,21 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int colCoords[] = {j - 1, j, j + 1};
             int Gx = 0;
             int Gy = 0;
-            for (int h = 0; h )
+            Gx += image[i - 1][j - 1] * -1;
+            Gx += image[i][j - 1] * -2;
+            Gx += image[i + 1][j - 1] * -1;
+            Gx += image[i - 1][j + 1] * 1;
+            Gx += image[i][j + 1] * 2;
+            Gx += image[i + 1][j + 1] * -1;
+
+            Gy += image[i - 1][j - 1] * -1;
+            Gy += image[i - 1][j] * -2;
+            Gy += image[i - 1][j + 1] * -1;
+            Gy += image[i + 1][j - 1] * 1;
+            Gy += image[i + 1][j] * 2;
+            Gy += image[i + 1][j + 1] * 1;
+
+            float sobel = 
         }
     }
     return;
