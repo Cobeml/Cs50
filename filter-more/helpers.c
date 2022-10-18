@@ -89,8 +89,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             int rowCoords[] = {i - 1, i, i + 1};
             int colCoords[] = {j - 1, j, j + 1};
-            int Gx
-            for (int)
+            int Gx = 0;
+            int Gy = 0;
+            for (int h = 0; h )
         }
     }
     return;
