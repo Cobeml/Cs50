@@ -89,7 +89,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             int rowCoords[] = {i - 1, i, i + 1};
             int colCoords[] = {j - 1, j, j + 1};
-            int kernel
+            int kernelVal[] =
             double Gx = 0;
             double Gy = 0;
             if (i - 1 >= 0)
