@@ -89,8 +89,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             int rowCoords[] = {i - 1, i, i + 1};
             int colCoords[] = {j - 1, j, j + 1};
-            int Gx = 0;
-            int Gy = 0;
+            double Gx = 0;
+            double Gy = 0;
             Gx += image[i - 1][j - 1] * -1;
             Gx += image[i][j - 1] * -2;
             Gx += image[i + 1][j - 1] * -1;
@@ -105,7 +105,29 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             Gy += image[i + 1][j] * 2;
             Gy += image[i + 1][j + 1] * 1;
 
-            float sobel = 
+            double sobel = sqrt(pow(Gx, 2) + pow(Gy, 2));
+
+            if (sobel > 255)
+            {
+                temp[i][j].rgbtRed = 255;
+                temp[i][j].rgbtGreen = 255;
+                temp[i][j].rgbtBlue = 255;
+            }
+            else
+            {
+
+                temp[i][j].rgbtRed = round(sobel);
+                temp[i][j].rgbtGreen = round(sobel);
+                temp[i][j].rgbtBlue = round(sobel);
+            }
+        }
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = temp[i][j];
         }
     }
     return;
