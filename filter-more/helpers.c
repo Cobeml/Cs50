@@ -92,10 +92,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int kernelVal[] = {-1, 0, 1, -2, 0, 2, -1, 0, 1};
             double Gx = 0;
             double Gy = 0;
-            if (i - 1 >= 0)
-            {
-
-            }
+            
             Gx += image[i - 1][j - 1] * -1;
             Gx += image[i][j - 1] * -2;
             Gx += image[i + 1][j - 1] * -1;
